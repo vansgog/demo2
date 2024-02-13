@@ -1,37 +1,50 @@
 package com.example.demo.dao;
 
-import com.example.demo.config.JdbcConnector;
-import com.example.demo.config.JdbcConnectorImpl;
+import com.example.demo.Util.JdbcConnector;
 import com.example.demo.model.User;
 
+import java.sql.Connection;
+import java.util.List;
+
 public class JdbcImpl implements Jdbc {
+    /*
+     * Реализовать методы
+     * Используем commit,rollback
+     *service переиспользует методы dao
+     *Обработка всех исключений, связанных с работой с базой данных должна находиться в dao
+     * */
+    private final Connection connection = JdbcConnector.getConnection();
 
-    private final JdbcConnector jdbc = new JdbcConnectorImpl();
-
-/*
-* Реализовать методы
-* Используем commit,rollback
-*
-* */
-
-    @Override
-    public User createUser(User user) {
-       return user;
+    public JdbcImpl() {
     }
 
     @Override
-    public User insert(User user) {
-        return user;
+    public void createUsersTable() {
+
     }
 
     @Override
-    public User getUser(Long id) {
+    public void dropUsersTable() {
 
-        return new User();
     }
 
     @Override
-    public void deleteUser(User user) {
+    public void saveUser(String name, String lastName, byte age) {
+
+    }
+
+    @Override
+    public void removeUserById(long id) {
+
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return null;
+    }
+
+    @Override
+    public void cleanUsersTable() {
 
     }
 

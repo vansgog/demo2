@@ -1,18 +1,16 @@
 package com.example.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 public class Demo2Application {
 
     public static void main(String[] args) {
-       /*
-       * Добавить 3 пользователя
-       * Изменить одного пользователя
-       * Получить 2-го пользователя
-       * Удалить 2-го пользователя
-       *
-       * */
+        /*
+         * Создание таблицы юзеров
+         *Добавление 4 юзеров в таблицу с данными на свой выбор. После каждого добавления должен быть вывод в консоль (User с именем — name добавлен в базу данных)
+         *Получение всех User из базы и вывод в консоль (должен быть переопределен toString в классе User)
+         *Очистка таблицы юзеров
+         *Удаление таблицы
+         *
+         * */
     }
 
 }

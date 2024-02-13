@@ -1,11 +1,10 @@
-package com.example.demo.dao;
+package com.example.demo.service;
 
 import com.example.demo.model.User;
 
 import java.util.List;
 
-public interface Jdbc {
-
+public interface UserService {
     void createUsersTable();
 
     void dropUsersTable();
