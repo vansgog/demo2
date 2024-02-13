@@ -8,11 +8,14 @@ public class JdbcImpl implements Jdbc {
 
     private final JdbcConnector jdbc = new JdbcConnectorImpl();
 
-
+/*
+* Реализовать методы
+* Используем commit,rollback
+*
+* */
 
     @Override
     public User createUser(User user) {
-
        return user;
     }
 
