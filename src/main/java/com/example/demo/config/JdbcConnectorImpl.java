@@ -14,15 +14,14 @@ public class JdbcConnectorImpl implements JdbcConnector {
 
     public Connection connection(){
         try {
-            Class.forName("org.postgresql.Driver").getDeclaredConstructor().newInstance();
+            Class.forName("org.postgresql.Driver");
             try (Connection con = DriverManager.getConnection(uri,userName,password)) {
                 con.setAutoCommit(false);
                 return con;
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException |
-                 ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
