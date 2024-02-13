@@ -4,5 +4,5 @@ import java.sql.Connection;
 
 public interface JdbcConnector {
 
-    Connection connection();
+    Connection connection() throws ClassNotFoundException;
 }
