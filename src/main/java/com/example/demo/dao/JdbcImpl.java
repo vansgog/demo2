@@ -29,7 +29,7 @@ public class JdbcImpl implements Jdbc {
     }
 
     @Override
-    public void saveUser(String name, String lastName, byte age) {
+    public void saveUser(String name, String lastName) {
 
     }
 
